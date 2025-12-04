@@ -11,7 +11,7 @@ print(age) # 23
 
 nickname = "davidoar15"
 print(type(nickname), nickname) # <class 'str'> davidoar15
-nickname = 15
+# nickname = 15 !! Error
 print(type(nickname), nickname) # <class 'int'> 15
 
 #! f-string
@@ -41,3 +41,11 @@ print(MY_CONST_PI)
 # 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 
 # 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 
 # 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+is_user_logged_in: bool = True
+print(type(is_user_logged_in), is_user_logged_in)
+
+# is_user_logged_in = 2 !! Error
+# print(type(is_user_logged_in), is_user_logged_in)
+
+nickname: str = "david"
