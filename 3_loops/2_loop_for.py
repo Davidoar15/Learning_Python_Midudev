@@ -29,6 +29,14 @@ for i, animal in enumerate(animals):
 for i, animal in enumerate(animals): 
     if animal == "bird": continue
 
-    print(animal)
+    print(i, animal)
 
 
+# List Comprehension       animal      =      animal
+animals_capital_letters = [animal.upper() for animal in animals]
+print(animals_capital_letters)
+
+
+# Show even numbers (List Comprehension + Conditional)
+even = [num for num in [1,2,3,4,5,6,7,8,9] if num % 2 == 0]
+print(even)
