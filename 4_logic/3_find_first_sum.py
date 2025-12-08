@@ -21,3 +21,18 @@ def find_first_sum(nums, goal) -> list[int] | None:
 
 print(find_first_sum([4, 5, 6, 2], 8))
 print(find_first_sum([4, 6, 6, 2], 11))
+print(find_first_sum([4, 3, 6, 2], 5))
+
+def find_first_sum_with_dict(nums, goal) -> list[int] | None: 
+    seen = {}
+    for idx, value in enumerate(nums):
+        missing = goal - value
+
+        if missing in seen: return [seen[missing], idx]
+
+        seen[value] = idx
+    return None
+
+print(find_first_sum_with_dict([4, 5, 6, 2], 8))
+print(find_first_sum_with_dict([4, 6, 6, 2], 11))
+print(find_first_sum_with_dict([4, 3, 6, 2], 5))
