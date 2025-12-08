@@ -7,7 +7,10 @@ Objetivo:
 Escribe una función en Python que reciba una lista de números enteros y devuelva la suma total de los huevos que pertenecen a los dinosaurios carnívoros (es decir, la suma de todos los números pares en la lista).
 """
 
-def count_total_of_carnivorous_dino_eggs(list_eggs: list[int]):
+def count_total_of_carnivorous_dino_eggs(list_eggs: list[int]) -> int:
+    """
+    It receives a list of integers and returns the total sum of the eggs that belong to carnivorous dinosaurs (the sum of all even numbers in the list).
+    """
     total = 0
     for eggs in list_eggs:
         if eggs <= 0: continue
@@ -18,6 +21,6 @@ list1 = list(range(11))
 list2 = list(range(51))
 list3 = list(range(100))
 
-print(count_total_of_carnivorous_dino_eggs(list1))
-print(count_total_of_carnivorous_dino_eggs(list2))
-print(count_total_of_carnivorous_dino_eggs(list3))
+print(count_total_of_carnivorous_dino_eggs(list1)) # 30
+print(count_total_of_carnivorous_dino_eggs(list2)) # 650
+print(count_total_of_carnivorous_dino_eggs(list3)) # 2450
