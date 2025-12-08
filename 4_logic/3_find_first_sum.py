@@ -21,3 +21,4 @@ def meet_condition(num1: int, num2: int, goal: int) -> bool:
     return num1 != num2 and num1 + num2 == goal
 
 print(find_first_sum([4, 5, 6, 2], 8))
+print(find_first_sum([4, 6, 6, 2], 11))
