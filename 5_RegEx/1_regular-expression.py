@@ -29,3 +29,34 @@ text2 = "I like Python. Python is the best. And Python is not difficult, what aw
 pattern2 = "Python"
 matches = re.findall(pattern2, text2)
 print(matches, len(matches), sep=" | ") # ['Python', 'Python', 'Python', 'Python'] | 4
+
+# return an iterator containing all the search results
+matches2 = re.finditer(pattern2, text2)
+for match in matches2: print(match.group(), match.start(), match.end(), sep=" | ")
+# Python | 7  | 13
+# Python | 15 | 21
+# Python | 39 | 45
+# Python | 80 | 86
+
+# ? Modifiers. Options that can be added to a pattern to change its behavior
+# * re.IGNORECASE
+text3 = "I like python. Python is the best. And python is not difficult, what awesome is PYTHON!"
+pattern3 = "python"
+found_py = re.search(pattern3, text3, re.IGNORECASE)
+pys = re.findall(pattern3, text3, re.IGNORECASE)
+if found_py: 
+    print(f"The pattern has been found in the text in the position { found_py.start() } and ends in the position { found_py.end() }")
+    print(pys)
+
+    # The pattern has been found in the text in the position 7 and ends in the position 13
+    # ['python', 'Python', 'python', 'PYTHON']
+else: 
+    print("The pattern was NOT found in the text")
+
+# replaces all pattern matches in text
+text4 = "Hello World! and hello again."
+pattern4 = "Hello"
+replacement = "Goodbye"
+                                               # count. Default 0
+new_text = re.sub(pattern4, replacement, text4,      0           , re.IGNORECASE)
+print(new_text) # Goodbye World! and Goodbye again.
