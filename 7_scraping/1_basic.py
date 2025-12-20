@@ -1,10 +1,11 @@
 import requests, re
 
-# * Requests
+# * Requests (STATIC)
 # ! contras: 
     # - Cannot bypass paywalls or captchas
-    # - Cannot navegate
+    # - Cannot navigate
     # - Very manual
+    # - It does not work with SPAs
 # ? pros: 
     # + Very fast
     # + Very easy to implement
@@ -19,6 +20,3 @@ if response.status_code == 200:
         match = re.search(title_pattern, html)
         if match: print(f"{ match.group(1)}")
     else: print("ERROR")
-
-
-# * 
